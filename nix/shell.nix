@@ -50,7 +50,7 @@ stdenv.mkDerivation {
     sh ./nix/reset-test-data.sh
     sh ./nix/spawn-test-deps.sh
 
-    alias geth="geth --config=/app/.go-ethereum/config.toml"
+    alias geth-cli="geth attach /app/.go-ethereum/data/geth.ipc"
 
     export HOOGLEDB=/root/.hoogle
     if [ "$(ls -A $HOOGLEDB)" ]; then

@@ -6,7 +6,8 @@ set -m
 # go-ethereum
 #
 
-geth --config=/app/.go-ethereum/config.toml init /app/.go-ethereum/genesis.json
+geth --config=/app/.go-ethereum/config.toml --nousb init /app/.go-ethereum/genesis.json
+nohup geth --config=/app/.go-ethereum/config.toml --nousb --mine --miner.threads=1 2> /app/.go-ethereum/geth.log &
 
 #
 # env

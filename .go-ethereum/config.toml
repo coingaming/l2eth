@@ -26,7 +26,7 @@ Noverify = false
 CacheDir = "ethash"
 CachesInMem = 2
 CachesOnDisk = 3
-DatasetDir = "/root/.go-ethereum/data/.ethash"
+DatasetDir = "/app/.go-ethereum/data/.ethash"
 DatasetsInMem = 1
 DatasetsOnDisk = 2
 PowMode = 0
@@ -54,7 +54,7 @@ MinimumAcceptedPOW = 2e-01
 RestrictConnectionBetweenLightClients = true
 
 [Node]
-DataDir = "/root/.go-ethereum/data"
+DataDir = "/app/.go-ethereum/data"
 omitempty = ""
 IPCPath = "geth.ipc"
 HTTPPort = 8545
