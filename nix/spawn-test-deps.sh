@@ -2,6 +2,16 @@
 
 set -m
 
+#
+# go-ethereum
+#
+
+geth --config=/app/.go-ethereum/config.toml init /app/.go-ethereum/genesis.json
+
+#
+# env
+#
+
 export PATH=$PATH:/bin/
 export PGDATA=$PWD/postgres
 export PGHOST=/tmp/postgres

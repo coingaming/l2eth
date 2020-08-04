@@ -26,6 +26,7 @@ stdenv.mkDerivation {
     /* IDE */
     haskell-ide
     /* Apps */
+    go-ethereum
     postgresql
     /* Utils */
     git
@@ -48,6 +49,8 @@ stdenv.mkDerivation {
     source ./nix/export-test-envs.sh
     sh ./nix/reset-test-data.sh
     sh ./nix/spawn-test-deps.sh
+
+    alias geth="geth --config=/app/.go-ethereum/config.toml"
 
     export HOOGLEDB=/root/.hoogle
     if [ "$(ls -A $HOOGLEDB)" ]; then
