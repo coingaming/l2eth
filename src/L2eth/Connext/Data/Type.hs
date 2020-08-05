@@ -2,7 +2,7 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 
 module L2eth.Connext.Data.Type
-  ( ConnextNodeUrl (..),
+  ( ConnextRestApiClientUrl (..),
     ConnextNetworkManager (..),
     ConnextEnv (..),
     EthAccount (..),
@@ -17,14 +17,13 @@ import Network.HTTP.Client (Manager, newManager)
 import Network.HTTP.Client.TLS (mkManagerSettings)
 import Network.TLS (defaultParamsClient)
 
-newtype ConnextNodeUrl = ConnextNodeUrl String
-  deriving newtype (FromJSON)
+newtype ConnextRestApiClientUrl = ConnextRestApiClientUrl String
 
 newtype ConnextNetworkManager = ConnextNetworkManager Manager
 
 data ConnextEnv
   = ConnextEnv
-      { connextNodeUrl :: ConnextNodeUrl,
+      { connextRestApiClientUrl :: ConnextRestApiClientUrl,
         connextNetworkManager :: ConnextNetworkManager
       }
 
@@ -32,20 +31,20 @@ newtype EthAccount = EthAccount Text
   deriving newtype (ToJSON, FromJSON)
 
 --
--- TODO : proper field types
+-- TODO : proper newtypes
 --
 data ChannelConfig
   = ChannelConfig
       { signerAddress :: Text,
         multisigAddress :: Text,
-        nodeUrl :: ConnextNodeUrl,
+        nodeUrl :: Text,
         userIdentifier :: Text
       }
   deriving (Generic)
 
 instance FromJSON ChannelConfig
 
-newConnextEnv :: ConnextNodeUrl -> IO ConnextEnv
+newConnextEnv :: ConnextRestApiClientUrl -> IO ConnextEnv
 newConnextEnv u = do
   manager <-
     newManager $
@@ -54,6 +53,6 @@ newConnextEnv u = do
         Nothing
   return $
     ConnextEnv
-      { connextNodeUrl = u,
+      { connextRestApiClientUrl = u,
         connextNetworkManager = ConnextNetworkManager manager
       }

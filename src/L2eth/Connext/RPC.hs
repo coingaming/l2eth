@@ -48,7 +48,9 @@ rpc
       rpcUrlQuery,
       rpcReqBody
     } = do
-    req0 <- parseRequest $ coerce (connextNodeUrl rpcEnv) <> rpcUrlPath
+    req0 <-
+      parseRequest $
+        coerce (connextRestApiClientUrl rpcEnv) <> rpcUrlPath
     let req1 =
           req0
             { method = renderStdMethod rpcMethod,
@@ -74,5 +76,5 @@ create env =
         rpcMethod = POST,
         rpcUrlPath = "/create",
         rpcUrlQuery = [],
-        rpcReqBody = Nothing :: Maybe VoidRequest
+        rpcReqBody = Just VoidRequest
       }

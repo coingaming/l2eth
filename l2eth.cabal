@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.33.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a01ea239a9edf819bbb6436d4e858f1c8c1b4cdca324dcff598080d9b0b0ef78
+-- hash: b2227c93bbd89bde84cdb47a1e79c8ee8508f123a0037d8eb9c66298ffb7e193
 
 name:           l2eth
 version:        0.1.0.0
@@ -28,6 +28,7 @@ source-repository head
 library
   exposed-modules:
       L2eth.Class
+      L2eth.Connext
       L2eth.Connext.Data.Type
       L2eth.Connext.Data.Void
       L2eth.Connext.Import
@@ -151,6 +152,9 @@ test-suite l2eth-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Connext.RPCSpec
+      Connext.TestEnv
+      Connext.TestOrphan
       Paths_l2eth
   hs-source-dirs:
       test
