@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.1.
+-- This file has been generated from package.yaml by hpack version 0.31.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b2227c93bbd89bde84cdb47a1e79c8ee8508f123a0037d8eb9c66298ffb7e193
+-- hash: 6b17236d279044b5b9cbb224302c31666254fdcf0f5648ba48dbd76204fd0901
 
 name:           l2eth
 version:        0.1.0.0
@@ -91,6 +91,7 @@ library
     , wai
     , wai-middleware-static-embedded
     , warp
+    , web3
     , websockets
   default-language: Haskell2010
 
@@ -145,6 +146,7 @@ executable l2eth-exe
     , wai
     , wai-middleware-static-embedded
     , warp
+    , web3
     , websockets
   default-language: Haskell2010
 
@@ -205,5 +207,6 @@ test-suite l2eth-test
     , wai
     , wai-middleware-static-embedded
     , warp
+    , web3
     , websockets
   default-language: Haskell2010

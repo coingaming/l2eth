@@ -11,6 +11,7 @@ module L2eth.Connext.Data.Type
   )
 where
 
+import Data.Solidity.Prim.Address (Address)
 import L2eth.Connext.Import.External
 import Network.Connection (TLSSettings (..))
 import Network.HTTP.Client (Manager, newManager)
@@ -35,7 +36,7 @@ newtype EthAccount = EthAccount Text
 --
 data ChannelConfig
   = ChannelConfig
-      { signerAddress :: Text,
+      { signerAddress :: Address,
         multisigAddress :: Text,
         nodeUrl :: Text,
         userIdentifier :: Text

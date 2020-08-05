@@ -87,6 +87,7 @@ dependencies:
 - http-types
 - http-conduit
 - conduit
+- web3
 # other
 - extra
 

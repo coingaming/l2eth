@@ -10,6 +10,7 @@ spec :: Spec
 spec = do
   describe "create" $ do
     it "create succeeds" $ do
+      setupEnv
       env <- newMerchantEnv
       res <- create env
       res `shouldSatisfy` isRight

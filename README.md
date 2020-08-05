@@ -1,8 +1,8 @@
-# l2eth
+# L2eth
 
 Client libraries for Layer 2 technologies of Etherium
 
-# environment
+# Environment
 
 Connext hub
 
@@ -46,7 +46,7 @@ CONNEXT_NODE_URL='http://localhost:3000' \
   npm start
 ```
 
-# tests
+# Tests
 
 ```bash
 stack test

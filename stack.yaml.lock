@@ -75,11 +75,15 @@ packages:
   original:
     hackage: wai-middleware-static-embedded-0.1.0.0@sha256:036b7823a5e69452d1fe1e270ef3d4988063caa5bb00b6dfc356e1c21b7433e3,1581
 - completed:
+    hackage: bitvec-1.0.3.0@sha256:f69ed0e463045cb497a7cf1bc808a2e84ea0ce286cf9507983bb6ed8b4bd3993,3977
+    pantry-tree:
+      size: 2372
+      sha256: e3cf4b28e01c3eb9b0cf46a8a2e7eef1ced133d5ad626aaba099cf468007dd90
+  original:
+    hackage: bitvec-1.0.3.0@sha256:f69ed0e463045cb497a7cf1bc808a2e84ea0ce286cf9507983bb6ed8b4bd3993,3977
+- completed:
     size: 24681
     url: https://github.com/tkachuk-labs/persistent-migration/archive/d75fb27181319e3fe18ff19e45198feee6a88187.tar.gz
-    cabal-file:
-      size: 3570
-      sha256: a5e5ee35c9fe00294b36d287ef191002cc1a51864f42c958c798bf20969939f4
     name: persistent-migration
     version: 0.1.0
     sha256: 9fcae8fbae3bd004bde3dee64f394083b21fcc6c3246752d23b2c050406a33a8
@@ -93,9 +97,6 @@ packages:
 - completed:
     size: 55457
     url: https://github.com/tkachuk-labs/HaskellNet/archive/73bf47e9e4ee7ec18da0da2b23a18d4e4baa8485.tar.gz
-    cabal-file:
-      size: 2069
-      sha256: 9192ac19ea5da3cd4b8c86a4266592aff7b9256311aa5f42ae6de94ccacf1366
     name: HaskellNet
     version: 0.5.1
     sha256: d861bb9123051e90b00545a35f93aebc852370cbcc759b4efb4bc4dd75210f35
@@ -110,9 +111,6 @@ packages:
     size: 6137383
     subdir: concur-core
     url: https://github.com/tkachuk-labs/concur/archive/dc5347b35c79654d58fa95716f425ee7248504fb.tar.gz
-    cabal-file:
-      size: 1249
-      sha256: 83ca3759fb22dbfec6fcc352a80335a8046c973d8418c0663c3455efba0eef75
     name: concur-core
     version: 0.1.0.0
     sha256: 0253f7cc909e8620a1ca9f45a553dfb77b502dbdc77cbe0f0e92e63c4ff5f81b
@@ -127,9 +125,6 @@ packages:
 - completed:
     size: 195022
     url: https://github.com/tkachuk-labs/replica/archive/c0046ff9b3be5e20e5306de743b83620cf59c6a9.tar.gz
-    cabal-file:
-      size: 2016
-      sha256: 37fbd822c4b163189e676bd7d7dfcbef24ea3dfc989a66a20352283f4b02b46d
     name: replica
     version: 0.1.0.0
     sha256: d7d043b603be23acbfa04fbf198dc136909e23f8aa502aafa05dcc5b9e25daf5
@@ -143,9 +138,6 @@ packages:
 - completed:
     size: 25421
     url: https://github.com/tkachuk-labs/concur-replica/archive/7d16bcc93114c62252e3e22c208dc2a819f02435.tar.gz
-    cabal-file:
-      size: 5733
-      sha256: edd2ed3840417632ae9c6700fe0755bdb88992bf8c89a0b2734c484726b23c1d
     name: concur-replica
     version: 0.1.0.0
     sha256: 2a808d1214b48eb8fb8f98740b0b37022c26e52e8cbf4d201f19866bed2519bd
@@ -160,9 +152,6 @@ packages:
     size: 110250
     subdir: core
     url: https://github.com/tkachuk-labs/gRPC-haskell/archive/8eaee520cd1a2ae909d2ef7ce16ce3a17be4418a.tar.gz
-    cabal-file:
-      size: 3306
-      sha256: 4bacd90915321750db570042cd05ada01b9b83c79f6bf6b6ccdef1889b383efa
     name: grpc-haskell-core
     version: 0.0.0.0
     sha256: d9c150a855b85b5ebc1c22c2fcc0ea171ee0fdee46dd626a115f8405cb5c4502
@@ -177,9 +166,6 @@ packages:
 - completed:
     size: 110250
     url: https://github.com/tkachuk-labs/gRPC-haskell/archive/8eaee520cd1a2ae909d2ef7ce16ce3a17be4418a.tar.gz
-    cabal-file:
-      size: 6044
-      sha256: 20b32a3b2f8a4a6db8cf0f9995e159c60d6a93e6e64ef8a4b7429a1fdb1036fa
     name: grpc-haskell
     version: 0.0.1.0
     sha256: d9c150a855b85b5ebc1c22c2fcc0ea171ee0fdee46dd626a115f8405cb5c4502
@@ -193,9 +179,6 @@ packages:
 - completed:
     size: 78528
     url: https://github.com/tkachuk-labs/proto3-suite/archive/ca03aa9d846d88b0762e40f9588b4927de22f798.tar.gz
-    cabal-file:
-      size: 5729
-      sha256: 2a57338dc12c00bc6b764f314baf4ac041b93a81dcadfa284e643d52e2f54ec7
     name: proto3-suite
     version: 0.4.0.0
     sha256: be7b53ee359f0e02e8a363cafe62d5d6ae110ad211a033ef53a230f0ba2589b9
@@ -209,9 +192,6 @@ packages:
 - completed:
     size: 20147
     url: https://github.com/tkachuk-labs/proto3-wire/archive/23015cf6363d1962fde6bdff0de111f7ec59ab75.tar.gz
-    cabal-file:
-      size: 1928
-      sha256: 5e750211a8fdae75ffcdd0a70581ae635be5510b321924c5196ac44189fd1432
     name: proto3-wire
     version: 1.1.0
     sha256: af5f173afe9831f1e9bd061c9e0878de8fd18987f0604885a69c4d81c5824c4e
