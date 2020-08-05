@@ -63,10 +63,37 @@ dependencies:
 - containers
 - envparse
 - extra
+#
+# TODO : remove redundant deps and duplicates
+#
+# time
+- time
+- chronos
+- unbounded-delays
+- retry
+# bytes and text
+- text
+- bytestring
+- base64-bytestring
+- aeson
+# threads
+- async
+- stm
+# network
+- tls
+- connection
+- http-client
+- http-client-tls
+- http-types
+- http-conduit
+- conduit
+# other
+- extra
 
 library:
   source-dirs: src
   default-extensions:
+  - DeriveGeneric
   - NoImplicitPrelude
   - MultiParamTypeClasses
   - LambdaCase
@@ -94,6 +121,7 @@ executables:
     main:                Main.hs
     source-dirs:         app
     default-extensions:
+    - DeriveGeneric
     - NoImplicitPrelude
     - MultiParamTypeClasses
     - LambdaCase
@@ -123,6 +151,7 @@ tests:
     main:                Spec.hs
     source-dirs:         test
     default-extensions:
+    - DeriveGeneric
     - NoImplicitPrelude
     - MultiParamTypeClasses
     - LambdaCase

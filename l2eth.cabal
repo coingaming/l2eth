@@ -1,0 +1,205 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a01ea239a9edf819bbb6436d4e858f1c8c1b4cdca324dcff598080d9b0b0ef78
+
+name:           l2eth
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/l2eth#readme>
+homepage:       https://github.com/githubuser/l2eth#readme
+bug-reports:    https://github.com/githubuser/l2eth/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/l2eth
+
+library
+  exposed-modules:
+      L2eth.Class
+      L2eth.Connext.Data.Type
+      L2eth.Connext.Data.Void
+      L2eth.Connext.Import
+      L2eth.Connext.Import.External
+      L2eth.Connext.RPC
+      L2eth.Data.AppM
+      L2eth.Data.Env
+      L2eth.Data.Type
+      L2eth.Import
+      L2eth.Import.External
+      L2eth.Wai.Static
+      Lib
+  other-modules:
+      Paths_l2eth
+  hs-source-dirs:
+      src
+  default-extensions: DeriveGeneric NoImplicitPrelude MultiParamTypeClasses LambdaCase OverloadedStrings ScopedTypeVariables
+  ghc-options: -Weverything -Werror -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction
+  build-depends:
+      aeson
+    , async
+    , base >=4.7 && <5
+    , base64-bytestring
+    , bytestring
+    , chronos
+    , concur-core
+    , concur-replica
+    , conduit
+    , connection
+    , containers
+    , envparse
+    , esqueleto
+    , extra
+    , file-embed
+    , hspec
+    , hspec-wai
+    , http-client
+    , http-client-tls
+    , http-conduit
+    , http-types
+    , katip
+    , lens
+    , microlens
+    , monad-logger
+    , persistent
+    , persistent-migration
+    , persistent-postgresql
+    , persistent-template
+    , replica
+    , resource-pool
+    , retry
+    , stm
+    , template-haskell
+    , text
+    , time
+    , tls
+    , unbounded-delays
+    , universum
+    , unliftio
+    , wai
+    , wai-middleware-static-embedded
+    , warp
+    , websockets
+  default-language: Haskell2010
+
+executable l2eth-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_l2eth
+  hs-source-dirs:
+      app
+  default-extensions: DeriveGeneric NoImplicitPrelude MultiParamTypeClasses LambdaCase OverloadedStrings ScopedTypeVariables
+  ghc-options: -Weverything -Werror -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , async
+    , base >=4.7 && <5
+    , base64-bytestring
+    , bytestring
+    , chronos
+    , concur-core
+    , concur-replica
+    , conduit
+    , connection
+    , containers
+    , envparse
+    , esqueleto
+    , extra
+    , file-embed
+    , http-client
+    , http-client-tls
+    , http-conduit
+    , http-types
+    , katip
+    , l2eth
+    , lens
+    , microlens
+    , monad-logger
+    , persistent
+    , persistent-migration
+    , persistent-postgresql
+    , persistent-template
+    , replica
+    , resource-pool
+    , retry
+    , stm
+    , template-haskell
+    , text
+    , time
+    , tls
+    , unbounded-delays
+    , universum
+    , unliftio
+    , wai
+    , wai-middleware-static-embedded
+    , warp
+    , websockets
+  default-language: Haskell2010
+
+test-suite l2eth-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_l2eth
+  hs-source-dirs:
+      test
+  default-extensions: DeriveGeneric NoImplicitPrelude MultiParamTypeClasses LambdaCase OverloadedStrings ScopedTypeVariables
+  ghc-options: -Weverything -Werror -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , async
+    , base >=4.7 && <5
+    , base64-bytestring
+    , bytestring
+    , chronos
+    , concur-core
+    , concur-replica
+    , conduit
+    , connection
+    , containers
+    , envparse
+    , esqueleto
+    , extra
+    , file-embed
+    , hspec
+    , hspec-wai
+    , http-client
+    , http-client-tls
+    , http-conduit
+    , http-types
+    , katip
+    , l2eth
+    , lens
+    , microlens
+    , monad-logger
+    , persistent
+    , persistent-migration
+    , persistent-postgresql
+    , persistent-template
+    , replica
+    , resource-pool
+    , retry
+    , stm
+    , template-haskell
+    , text
+    , time
+    , tls
+    , unbounded-delays
+    , universum
+    , unliftio
+    , wai
+    , wai-middleware-static-embedded
+    , warp
+    , websockets
+  default-language: Haskell2010
