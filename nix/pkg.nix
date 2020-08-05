@@ -1,10 +1,11 @@
-{ mkDerivation, async, base, bytestring, chronos, concur-core
-, concur-replica, containers, envparse, esqueleto, extra
-, file-embed, hpack, hspec, hspec-wai, katip, lens, microlens
-, monad-logger, persistent, persistent-migration
-, persistent-postgresql, persistent-template, replica
-, resource-pool, retry, stdenv, stm, template-haskell, text, time
-, unbounded-delays, universum, unliftio, wai
+{ mkDerivation, aeson, async, base, base64-bytestring, bytestring
+, chronos, concur-core, concur-replica, conduit, connection
+, containers, envparse, esqueleto, extra, file-embed, hpack, hspec
+, hspec-wai, http-client, http-client-tls, http-conduit, http-types
+, katip, lens, microlens, monad-logger, persistent
+, persistent-migration, persistent-postgresql, persistent-template
+, replica, resource-pool, retry, stdenv, stm, template-haskell
+, text, time, tls, unbounded-delays, universum, unliftio, wai
 , wai-middleware-static-embedded, warp, websockets
 }:
 mkDerivation {
@@ -14,29 +15,35 @@ mkDerivation {
   isLibrary = true;
   isExecutable = true;
   libraryHaskellDepends = [
-    async base bytestring chronos concur-core concur-replica containers
-    envparse esqueleto extra file-embed hspec hspec-wai katip lens
-    microlens monad-logger persistent persistent-migration
-    persistent-postgresql persistent-template replica resource-pool
-    retry stm template-haskell text time unbounded-delays universum
-    unliftio wai wai-middleware-static-embedded warp websockets
+    aeson async base base64-bytestring bytestring chronos concur-core
+    concur-replica conduit connection containers envparse esqueleto
+    extra file-embed hspec hspec-wai http-client http-client-tls
+    http-conduit http-types katip lens microlens monad-logger
+    persistent persistent-migration persistent-postgresql
+    persistent-template replica resource-pool retry stm
+    template-haskell text time tls unbounded-delays universum unliftio
+    wai wai-middleware-static-embedded warp websockets
   ];
   libraryToolDepends = [ hpack ];
   executableHaskellDepends = [
-    async base bytestring chronos concur-core concur-replica containers
-    envparse esqueleto extra file-embed katip lens microlens
-    monad-logger persistent persistent-migration persistent-postgresql
-    persistent-template replica resource-pool retry stm
-    template-haskell text time unbounded-delays universum unliftio wai
+    aeson async base base64-bytestring bytestring chronos concur-core
+    concur-replica conduit connection containers envparse esqueleto
+    extra file-embed http-client http-client-tls http-conduit
+    http-types katip lens microlens monad-logger persistent
+    persistent-migration persistent-postgresql persistent-template
+    replica resource-pool retry stm template-haskell text time tls
+    unbounded-delays universum unliftio wai
     wai-middleware-static-embedded warp websockets
   ];
   testHaskellDepends = [
-    async base bytestring chronos concur-core concur-replica containers
-    envparse esqueleto extra file-embed hspec hspec-wai katip lens
-    microlens monad-logger persistent persistent-migration
-    persistent-postgresql persistent-template replica resource-pool
-    retry stm template-haskell text time unbounded-delays universum
-    unliftio wai wai-middleware-static-embedded warp websockets
+    aeson async base base64-bytestring bytestring chronos concur-core
+    concur-replica conduit connection containers envparse esqueleto
+    extra file-embed hspec hspec-wai http-client http-client-tls
+    http-conduit http-types katip lens microlens monad-logger
+    persistent persistent-migration persistent-postgresql
+    persistent-template replica resource-pool retry stm
+    template-haskell text time tls unbounded-delays universum unliftio
+    wai wai-middleware-static-embedded warp websockets
   ];
   prePatch = "hpack";
   homepage = "https://github.com/githubuser/l2eth#readme";

@@ -4,7 +4,7 @@ Client libraries for Layer 2 technologies of Etherium
 
 # environment
 
-Connext
+Connext hub
 
 ```bash
 git clone git@github.com:connext/indra.git
@@ -18,7 +18,7 @@ make start
 make dls
 ```
 
-Merchant
+Connext merchant
 
 ```bash
 git clone git@github.com:connext/rest-api-client.git
@@ -29,15 +29,19 @@ npm i
 
 CONNEXT_NODE_URL='http://localhost:3000' \
   CONNEXT_ETH_PROVIDER_URL='http://localhost:8545' \
+  CONNEXT_STORE_DIR='./merchant-store' \
   PORT='5040' \
   npm start
 ```
 
-Customer
+Connext customer
 
 ```bash
+cd ./rest-api-client
+
 CONNEXT_NODE_URL='http://localhost:3000' \
   CONNEXT_ETH_PROVIDER_URL='http://localhost:8545' \
+  CONNEXT_STORE_DIR='./customer-store' \
   PORT='5041' \
   npm start
 ```
