@@ -5,6 +5,7 @@ postgres_data
 dist*
 postgres.log
 result
+nohup.out
 .go-ethereum/*
 !.go-ethereum/genesis.json
 !.go-ethereum/config.toml

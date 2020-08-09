@@ -6,7 +6,7 @@
 , persistent-migration, persistent-postgresql, persistent-template
 , replica, resource-pool, retry, stdenv, stm, template-haskell
 , text, time, tls, unbounded-delays, universum, unliftio, wai
-, wai-middleware-static-embedded, warp, websockets
+, wai-middleware-static-embedded, warp, web3, websockets
 }:
 mkDerivation {
   pname = "l2eth";
@@ -22,7 +22,7 @@ mkDerivation {
     persistent persistent-migration persistent-postgresql
     persistent-template replica resource-pool retry stm
     template-haskell text time tls unbounded-delays universum unliftio
-    wai wai-middleware-static-embedded warp websockets
+    wai wai-middleware-static-embedded warp web3 websockets
   ];
   libraryToolDepends = [ hpack ];
   executableHaskellDepends = [
@@ -33,7 +33,7 @@ mkDerivation {
     persistent-migration persistent-postgresql persistent-template
     replica resource-pool retry stm template-haskell text time tls
     unbounded-delays universum unliftio wai
-    wai-middleware-static-embedded warp websockets
+    wai-middleware-static-embedded warp web3 websockets
   ];
   testHaskellDepends = [
     aeson async base base64-bytestring bytestring chronos concur-core
@@ -43,7 +43,7 @@ mkDerivation {
     persistent persistent-migration persistent-postgresql
     persistent-template replica resource-pool retry stm
     template-haskell text time tls unbounded-delays universum unliftio
-    wai wai-middleware-static-embedded warp websockets
+    wai wai-middleware-static-embedded warp web3 websockets
   ];
   prePatch = "hpack";
   homepage = "https://github.com/githubuser/l2eth#readme";

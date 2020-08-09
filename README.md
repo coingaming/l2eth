@@ -11,6 +11,8 @@ git clone git@github.com:connext/indra.git
 
 cd ./indra
 
+git checkout 260333ea62d38c66a83d4fa94dd2e3ba593c9fa0
+
 # spawn Connext docker compose
 make start
 
