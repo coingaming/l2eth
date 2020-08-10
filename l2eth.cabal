@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.33.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6b17236d279044b5b9cbb224302c31666254fdcf0f5648ba48dbd76204fd0901
+-- hash: e88499c42d22ef4e861f8b92813ee6ef892f8219ea151ce1b19667d035fd8098
 
 name:           l2eth
 version:        0.1.0.0
@@ -29,6 +29,7 @@ library
   exposed-modules:
       L2eth.Class
       L2eth.Connext
+      L2eth.Connext.Data.Asset
       L2eth.Connext.Data.Type
       L2eth.Connext.Data.Void
       L2eth.Connext.Import

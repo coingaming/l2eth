@@ -6,7 +6,10 @@ module L2eth.Connext.Data.Type
     ConnextNetworkManager (..),
     ConnextEnv (..),
     EthAccount (..),
+    AssetId (..),
+    PublicIdentifier (..),
     ChannelConfig (..),
+    BalanceResponse (..),
     newConnextEnv,
   )
 where
@@ -31,6 +34,11 @@ data ConnextEnv
 newtype EthAccount = EthAccount Text
   deriving newtype (ToJSON, FromJSON)
 
+newtype AssetId = AssetId Text
+
+newtype PublicIdentifier = PublicIdentifier Text
+  deriving newtype (ToJSON, FromJSON)
+
 --
 -- TODO : proper newtypes
 --
@@ -39,11 +47,20 @@ data ChannelConfig
       { signerAddress :: Address,
         multisigAddress :: Text,
         nodeUrl :: Text,
-        userIdentifier :: Text
+        userIdentifier :: PublicIdentifier
       }
   deriving (Generic)
 
 instance FromJSON ChannelConfig
+
+data BalanceResponse
+  = BalanceResponse
+      { freeBalanceOffChain :: Text,
+        freeBalanceOnChain :: Text
+      }
+  deriving (Generic)
+
+instance FromJSON BalanceResponse
 
 newConnextEnv :: ConnextRestApiClientUrl -> IO ConnextEnv
 newConnextEnv u = do

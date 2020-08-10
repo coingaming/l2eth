@@ -3,10 +3,12 @@
 
 module L2eth.Connext.RPC
   ( create,
+    balance,
   )
 where
 
 import Data.ByteString.Lazy as BL (ByteString)
+import Data.Text as T
 import L2eth.Connext.Import
 import Network.HTTP.Client
   ( RequestBody (RequestBodyLBS),
@@ -75,6 +77,20 @@ create env =
       { rpcEnv = env,
         rpcMethod = POST,
         rpcUrlPath = "/create",
+        rpcUrlQuery = [],
+        rpcReqBody = Just VoidRequest
+      }
+
+balance ::
+  ConnextEnv ->
+  AssetId ->
+  IO (Either (Response BL.ByteString) BalanceResponse)
+balance env aid =
+  rpc $
+    RpcArgs
+      { rpcEnv = env,
+        rpcMethod = GET,
+        rpcUrlPath = "/balance/" <> (T.unpack $ coerce aid),
         rpcUrlQuery = [],
         rpcReqBody = Just VoidRequest
       }

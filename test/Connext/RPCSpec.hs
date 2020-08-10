@@ -13,4 +13,6 @@ spec = do
       setupEnv
       env <- newMerchantEnv
       res <- create env
+      bal <- balance env assetEth
+      liftIO $ print bal
       res `shouldSatisfy` isRight
